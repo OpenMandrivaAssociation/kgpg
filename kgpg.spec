@@ -1,11 +1,11 @@
 Name:    kgpg
 Summary: Control your GPG keys
-Version: 4.8.4
+Version: 4.8.97
 Release: 1
 Group: Graphical desktop/KDE
 License: LGPLv2
 URL:     http://utils.kde.org/projects/%name
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%version.tar.xz
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/%{name}-%version.tar.xz
 
 BuildRequires: kdelibs4-devel >= 2:%{version}
 BuildRequires: kdepimlibs4-devel
