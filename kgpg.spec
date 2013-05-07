@@ -1,6 +1,6 @@
 Name:		kgpg
 Summary:	Control your GPG keys
-Version:	4.10.2
+Version:	4.10.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -38,6 +38,9 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %makeinstall_std -C build
 
 %changelog
+* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
+- New version 4.10.3
+
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
 - New version 4.10.2
 
