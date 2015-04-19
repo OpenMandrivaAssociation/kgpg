@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	14.12.0
+Version:	15.04.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
