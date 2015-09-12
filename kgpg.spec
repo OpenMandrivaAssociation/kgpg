@@ -1,7 +1,7 @@
 Summary:	Control your GPG keys
 Name:		kgpg
 Version:	15.04.3
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
