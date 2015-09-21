@@ -1,13 +1,13 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs-devel
-BuildRequires:	kdepimlibs-devel
+BuildRequires:	kdelibs4-devel
+BuildRequires:	kdepimlibs4-devel
 
 %description
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
@@ -32,7 +32,7 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %setup -q
 
 %build
-%cmake_kde4
+%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
 %make
 
 %install
