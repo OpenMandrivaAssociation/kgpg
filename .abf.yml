@@ -1,4 +1,2 @@
-removed_sources:
-  kgpg-15.04.3.tar.xz: 3f70d04980de4d401f4f48e666cc7aeaade7619f
 sources:
-  kgpg-15.12.3.tar.xz: d7982d9e0ff5ab57feb12fa3b70b2e7f996ca465
+  kgpg-16.04.0.tar.xz: 2cfbfc9aa9c66beb84edb32817b8186d57a93c3d
