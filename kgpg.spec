@@ -1,39 +1,56 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	16.12.2
+Version:	17.03.80
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
-Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
-BuildRequires:	kdepimlibs4-devel
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5Codecs)
+BuildRequires:	cmake(KF5Contacts)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5JobWidgets)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5AkonadiContact)
+BuildRequires:	gpgme-devel
 
 %description
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
 %files
-%{_kde_applicationsdir}/kgpg.desktop
-%{_kde_appsdir}/kgpg
-%{_kde_autostart}/kgpg.desktop
-%{_kde_bindir}/kgpg
-%{_kde_datadir}/config.kcfg/kgpg.kcfg
-%{_kde_docdir}/HTML/*/kgpg
-%{_kde_iconsdir}/*/*/apps/kgpg.*
-%{_kde_services}/ServiceMenus/encryptfile.desktop
-%{_kde_services}/ServiceMenus/encryptfolder.desktop
-%{_kde_services}/ServiceMenus/viewdecrypted.desktop
-%{_datadir}/appdata/kgpg.appdata.xml
+%{_bindir}/*
+%{_datadir}/icons/*/*/*/*.*
+%{_datadir}/metainfo/*.appdata.xml
+%{_datadir}/kxmlgui5/kgpg
+%{_datadir}/kgpg
+%{_datadir}/kservices5/ServiceMenus/*.desktop
+%{_sysconfdir}/xdg/autostart/org.kde.kgpg.desktop
+%{_datadir}/applications/org.kde.kgpg.desktop
+%{_datadir}/config.kcfg/kgpg.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.kgpg.Key.xml
-
-#----------------------------------------------------------------------
+%doc %{_docdir}/HTML/en/kgpg
 
 %prep
 %setup -q
 
 %build
-%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
-%make
+%cmake_kde5
+%ninja
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
