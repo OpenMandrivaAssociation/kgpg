@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -32,7 +32,7 @@ BuildRequires:	gpgme-devel
 %description
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
-%files
+%files -f kgpg.lang
 %{_bindir}/*
 %{_datadir}/icons/*/*/*/*.*
 %{_datadir}/metainfo/*.appdata.xml
@@ -43,7 +43,6 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %{_datadir}/applications/org.kde.kgpg.desktop
 %{_datadir}/config.kcfg/kgpg.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.kgpg.Key.xml
-%doc %{_docdir}/HTML/en/kgpg
 
 %prep
 %setup -q
@@ -54,3 +53,4 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
 %install
 %ninja_install -C build
+%find_lang kgpg --with-html
