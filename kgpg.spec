@@ -28,8 +28,8 @@ BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(KF5AkonadiContact)
 BuildRequires:	gpgme-devel
+BuildRequires:	boost-devel
 
 %description
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
