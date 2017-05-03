@@ -7,6 +7,8 @@ Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(KF5Akonadi)
+BuildRequires:	cmake(KF5AkonadiContact)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5Codecs)
@@ -46,10 +48,10 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
