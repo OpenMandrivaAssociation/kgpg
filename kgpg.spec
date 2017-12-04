@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
