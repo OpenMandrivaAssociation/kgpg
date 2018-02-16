@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kgpg-17.12.1.tar.xz: bb7134be5ecb32cbfe385cc111338a24d8f4ccd0
+sources:
+  kgpg-17.12.2.tar.xz: 939325b54b45c61b36ad0e05e5ab59618c3ea0b9
