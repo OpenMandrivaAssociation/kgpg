@@ -31,6 +31,7 @@ BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(ECM)
 BuildRequires:	gpgme-devel
 BuildRequires:	boost-devel
@@ -51,7 +52,7 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %{_datadir}/dbus-1/interfaces/org.kde.kgpg.Key.xml
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
