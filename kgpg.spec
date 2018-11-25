@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	 18.08.3
+Version:	 18.11.80
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -40,6 +40,7 @@ BuildRequires:	boost-devel
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
 %files -f kgpg.lang
+%{_sysconfdir}/xdg/kgpg.categories
 %{_bindir}/*
 %{_datadir}/icons/*/*/*/*.*
 %{_datadir}/metainfo/*.appdata.xml
