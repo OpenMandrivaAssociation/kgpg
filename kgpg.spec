@@ -1,7 +1,7 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	20.03.90
-Release:	2
+Version:	20.04.0
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
