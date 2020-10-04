@@ -1,0 +1,15 @@
+diff -up kgpg-20.08.1/gpgproc.cpp.omv~ kgpg-20.08.1/gpgproc.cpp
+--- kgpg-20.08.1/gpgproc.cpp.omv~	2020-09-30 17:12:45.867771767 +0200
++++ kgpg-20.08.1/gpgproc.cpp	2020-09-30 17:13:56.774622723 +0200
+@@ -132,8 +132,9 @@ void GnupgBinary::setBinary(const QStrin
+ 			<< QLatin1String("--no-greeting");
+ 
+ 	if (!gpgConfigFile.isEmpty()) {
+-		m_standardArguments << QLatin1String("--options")
+-				<< gpgConfigFile;
++		if(QFile::exists(gpgConfigFile))
++			m_standardArguments << QLatin1String("--options")
++					<< gpgConfigFile;
+ 
+ 		// Check if the config file is in the default home directory
+ 		// of the binary. If it isn't add --homedir to command line also.
