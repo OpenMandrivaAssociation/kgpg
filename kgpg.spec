@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	20.08.2
+Version:	20.08.3
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
