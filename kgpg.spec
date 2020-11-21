@@ -1,13 +1,12 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kgpg-20.08.1-fix-bug-427160.patch
 BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5AkonadiContact)
 BuildRequires:	cmake(KF5Archive)
