@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
