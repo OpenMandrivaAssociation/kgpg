@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -46,11 +46,11 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %{_datadir}/metainfo/*.appdata.xml
 %{_datadir}/kxmlgui5/kgpg
 %{_datadir}/kgpg
-%{_datadir}/kservices5/ServiceMenus/*.desktop
 %{_sysconfdir}/xdg/autostart/org.kde.kgpg.desktop
 %{_datadir}/applications/org.kde.kgpg.desktop
 %{_datadir}/config.kcfg/kgpg.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.kgpg.Key.xml
+%{_datadir}/kio/servicemenus/*
 
 %prep
 %autosetup -p1
