@@ -1,7 +1,7 @@
 Summary:	Control your GPG keys
 Name:		plasma6-kgpg
 Version:	24.01.90
-Release:	2
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
@@ -27,12 +27,14 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(ECM)
+BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:	gpgme-devel
 BuildRequires:	boost-devel
 
