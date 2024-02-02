@@ -1,6 +1,6 @@
 Summary:	Control your GPG keys
 Name:		plasma6-kgpg
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
