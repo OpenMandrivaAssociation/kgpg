@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Control your GPG keys
 Name:		plasma6-kgpg
-Version:	24.02.0
-Release:	%{?git:0.%{git}.}2
+Version:	24.02.1
+Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/kgpg
