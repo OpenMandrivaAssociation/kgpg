@@ -7,7 +7,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://utils.kde.org/projects/kgpg
+Url:		https://utils.kde.org/projects/kgpg
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kgpg/-/archive/%{gitbranch}/kgpg-%{gitbranchd}.tar.bz2#/kgpg-%{git}.tar.bz2
