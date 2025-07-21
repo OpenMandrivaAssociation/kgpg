@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Control your GPG keys
 Name:		kgpg
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -50,10 +50,15 @@ BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:	gpgme-devel
 BuildRequires:	boost-devel
 
+%rename plasma6-kgpg
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KGpg is a simple interface for GnuPG, a powerful encryption utility.
 
-%files -f kgpg.lang
+%files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kgpg.categories
 %{_bindir}/*
 %{_datadir}/icons/*/*/*/*.*
@@ -63,16 +68,3 @@ KGpg is a simple interface for GnuPG, a powerful encryption utility.
 %{_datadir}/config.kcfg/kgpg.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.kgpg.Key.xml
 %{_datadir}/kio/servicemenus/*
-
-%prep
-%autosetup -p1 -n kgpg-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kgpg --with-html
